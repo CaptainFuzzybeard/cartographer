@@ -1,0 +1,85 @@
+{
+  "version": "v1",
+  "entries": [
+    {
+      "id": "hirschman_evl",
+      "name": "Exit, Voice, and Loyalty",
+      "attribution": "Albert Hirschman, 1970",
+      "shape": "A dynamic that emerges when members of any system \u2014 customers, employees, citizens, audience \u2014 grow dissatisfied. They face a choice between leaving (exit), pushing for change from within (voice), or staying without acting (loyalty mediating the choice). The most telling signal is often the *absence* of voice combined with quiet exit \u2014 when those who care most leave without ever complaining, it indicates loyalty cracked before the costs of voice felt bearable. Conversely, when the loudest critics are those most invested, voice is functioning. Hirschman applies anywhere there's a relationship between an actor and a system the actor depends on but cannot fully control.",
+      "diagnostic_signs": "Quiet attrition without complaint. Long-time members drifting away unnoticed. Loudest critics being those most committed (this is voice working) or those least committed (this is voice failing). Talk of 'churn' or 'departures' without a corresponding conversation about why people left.",
+      "deciding_variable": "The relative cost of voice vs. exit, mediated by the strength of loyalty.",
+      "generates_question": "What is the loyalty floor here? What would have to happen for someone to choose exit over voice \u2014 or vice versa?",
+      "not_this": "Not just a binary choice. The interesting cases are where loyalty bends how actors evaluate each option. Also: not every departure is exit-without-voice; sometimes people simply move on."
+    },
+    {
+      "id": "goodharts_law",
+      "name": "Goodhart's Law",
+      "attribution": "Charles Goodhart, 1975",
+      "shape": "When a measure becomes a target \u2014 when actors learn that they're being judged on a metric \u2014 the metric stops measuring what it was meant to measure. The actors optimise for the proxy, not the underlying goal, and the proxy diverges from the thing it was supposed to track. Goodhart fires anywhere a measurable quantity is used to evaluate or reward, and where the actors being measured have any agency to shift their behaviour. The diagnostic moment is when participants describe themselves using the language of the measurement system \u2014 when they've internalised the proxy as their identity.",
+      "diagnostic_signs": "Actors describing themselves using the metrics that judge them. Behaviour shifting from authentic to legible. The thing being measured no longer correlating with the underlying value. Talk of 'engagement' or 'performance' that has lost connection to what made the engagement valuable in the first place.",
+      "deciding_variable": "Whether the actor knows they are being measured, and whether the proxy has been mistaken for the goal.",
+      "generates_question": "What was the original goal here, and how is the proxy distorting the work toward something else?",
+      "not_this": "Not about bad metrics in general. Specifically about what happens when actors learn the metric and start optimising for it."
+    },
+    {
+      "id": "christensen_disruption",
+      "name": "Disruption and Jobs to be Done",
+      "attribution": "Clayton Christensen, 1997",
+      "shape": "Markets and incumbents systematically misrecognise new categories as 'niche' \u2014 small, marginal, not worth attention. The misrecognition happens because incumbents serve the *stated wants* of their existing customers (improved versions of what already exists), while disruptors serve an *underlying job* that customers couldn't articulate or weren't being served at all. By the time the new category becomes legible to incumbents, it has captured the underlying job and the incumbent's customer base is gone. Christensen fires anywhere a new entrant is being dismissed as too small to matter, or where a category is being defined by what existing players already do.",
+      "diagnostic_signs": "The word 'niche' applied to a category that is actually growing. Incumbents describing new entrants in the language of their own products. Customers being asked what they want (rather than what they're trying to accomplish). Mature markets where everyone is improving the same things.",
+      "deciding_variable": "Whether the new offering serves a job the incumbent does not see, or merely a want the incumbent already serves.",
+      "generates_question": "What is the actual job the customer is hiring this for? Is the market's description of the customer right, or downstream of incumbent assumptions?",
+      "not_this": "Not all small competitors are disruptors. Most are just small. Disruption requires a new way of meeting an underlying job."
+    },
+    {
+      "id": "coase_firm",
+      "name": "Theory of the Firm",
+      "attribution": "Ronald Coase, 1937",
+      "shape": "Firms exist because some transactions are too expensive to do through the market. The boundary of the firm is drawn where internalising a function becomes cheaper than transacting for it. Coase applies whenever there's a question of what to build vs. what to buy, what to own vs. what to partner for, what to keep inside the organisation vs. what to leave external. The pattern fires when an organisation is making structural choices about scope \u2014 particularly around platforms, distribution channels, audiences, and supply chains.",
+      "diagnostic_signs": "Debates about whether to build a platform vs. distribute on someone else's. Decisions about whether to own an audience vs. rent attention. Questions about vertical integration. Founders considering whether to internalise a function (like community management, distribution, hiring) that was previously external.",
+      "deciding_variable": "The transaction cost of doing it through the market vs. the cost of internalising it (including coordination costs as the organisation grows).",
+      "generates_question": "What is currently being internalised that should be external? What is being treated as external that should be internalised?",
+      "not_this": "Not about size. About which functions sit inside the boundary."
+    },
+    {
+      "id": "pace_layers",
+      "name": "Pace Layers",
+      "attribution": "Stewart Brand, 1999",
+      "shape": "Healthy systems have layers that change at different rates \u2014 fast layers innovate while slow layers stabilise. Fashion changes weekly; commerce changes monthly; infrastructure changes yearly; governance changes over decades; culture changes over generations. Trouble emerges when fast layers gain control over slow ones, or when slow layers are forced to keep up with fast ones. Pace Layers fires anywhere a system contains components moving at different temporal scales \u2014 and especially when one layer is dictating to another inappropriately. The diagnostic moment is recognising mismatched timescales.",
+      "diagnostic_signs": "Quarterly metrics being applied to work that takes years. Cultural changes being expected on commercial timescales. Long-term commitments being made on short-term information. Funding cycles forcing pace decisions on creative work. The phrase 'we need to move faster' applied to a layer that structurally cannot.",
+      "deciding_variable": "Whether the fast and slow layers are properly coupled, and which one is currently dictating to the other.",
+      "generates_question": "Which layer is moving at what speed here? Is the slow layer being rushed, or the fast layer being held back?",
+      "not_this": "Not about being fast or slow. About appropriate pacing for each function."
+    },
+    {
+      "id": "network_effects",
+      "name": "Network Effects",
+      "attribution": "Theodore Vail, popularised 1980s onward",
+      "shape": "A product, service, or community becomes more valuable as more people use it. The value of joining depends on who's already there. Network effects fire anywhere there's interaction *between* users (not just consumption from a central source) and where each additional user adds value to the existing ones. The pattern's most interesting application is to audience-first strategies \u2014 building the network *before* the product the network was built for, because the network itself becomes the moat. The diagnostic question is whether the value compounds with each new member or stays flat.",
+      "diagnostic_signs": "Communities where the value is the conversation between members, not the central content. Marketplaces. Newsletters whose subscribers know each other. Audience-first business models. The phrase 'critical mass'. Founders thinking about distribution before product.",
+      "deciding_variable": "Whether the network has reached critical mass, and what an additional member contributes to existing members' value.",
+      "generates_question": "What does an additional member add to this network? Does the value compound, or stay flat?",
+      "not_this": "Not all distribution channels are networks. A subscriber list with no peer interaction is a list, not a network."
+    },
+    {
+      "id": "sunk_cost",
+      "name": "Sunk Cost & Commitment Escalation",
+      "attribution": "Tversky & Kahneman; Staw",
+      "shape": "Past investments distort current decisions. Actors continue committing to losing paths because turning back feels like admitting waste, even though the past investments are unrecoverable regardless. The pattern intensifies when public commitments have been made (escalation of commitment) \u2014 the actor is now defending not just the original choice but their own judgement. Sunk cost fires anywhere there's reasoning that references past effort as a justification for present choices.",
+      "diagnostic_signs": "Phrases like 'we've come too far to stop now', 'after everything we've put in', 'we can't waste what we've already spent'. Founders persisting with strategies because of identity rather than current evidence. Reluctance to pivot because the pivot would invalidate previous public statements.",
+      "deciding_variable": "Whether the actor is reasoning forward (what is best now?) or backward (what did I already invest?).",
+      "generates_question": "If you knew nothing about how you got here, would you still choose this path?",
+      "not_this": "Not all persistence is sunk-cost. Sometimes commitment is the right move; sometimes it is escalation."
+    },
+    {
+      "id": "schumacher_small",
+      "name": "Small is Beautiful",
+      "attribution": "E.F. Schumacher, 1973",
+      "shape": "Optimal scale is task-specific. Many functions degrade at scale \u2014 they require a kind of attention, intimacy, or coherence that cannot be sustained beyond a certain size without becoming something fundamentally different. Schumacher fires anywhere there's pressure to grow that conflicts with the *nature* of the work. The pattern's diagnostic signature is a system that started at one scale, grew, and at some threshold lost something it cannot recover by adding more resources. The question Schumacher always asks: is the pressure to grow coming from the work itself, or from the system around it?",
+      "diagnostic_signs": "Systems that worked at small scale and broke at large scale, where the breakage isn't about resources. Founders feeling the work has changed character with growth. The phrase 'we need to scale this' applied to something whose value depended on not being scaled.",
+      "deciding_variable": "Whether the kind of work being done has a natural scale, and whether the actor is operating above, below, or at it.",
+      "generates_question": "At what scale does this work stop being itself? Is the pressure to grow coming from the work or from the system around it?",
+      "not_this": "Not anti-growth. About the right size for the right work."
+    }
+  ]
+}

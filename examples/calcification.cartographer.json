@@ -1,0 +1,320 @@
+{
+  "id": "inq_test_communities",
+  "title": "why do creator-led communities calcify?",
+  "created_at": 1730000000000,
+  "modified_at": 1730000000000,
+  "nodes": [
+    {
+      "id": 1,
+      "kind": "question",
+      "col": 14,
+      "row": 4,
+      "title": "the central question",
+      "text": "Why do creator-led communities \u2014 the ones that started intimate and alive \u2014 eventually calcify into something predictable, performative, and quiet?"
+    },
+    {
+      "id": 2,
+      "kind": "observation",
+      "col": 5,
+      "row": 9,
+      "title": "early intimacy is the draw",
+      "text": "What pulls people into a new creator community is the feeling that the creator is talking directly to them. The replies are personal. The energy feels like a small room."
+    },
+    {
+      "id": 3,
+      "kind": "observation",
+      "col": 5,
+      "row": 13,
+      "title": "the founder reads everything",
+      "text": "In the first months, the creator reads every comment, knows the regulars by name, responds to DMs. The membership feels witnessed."
+    },
+    {
+      "id": 4,
+      "kind": "observation",
+      "col": 13,
+      "row": 9,
+      "title": "scale dilutes attention",
+      "text": "Past a few hundred members, the creator can't read everything. Replies become rarer, then templated, then absent. The same intimacy that drew people in becomes impossible to sustain."
+    },
+    {
+      "id": 5,
+      "kind": "observation",
+      "col": 13,
+      "row": 13,
+      "title": "moderators take over",
+      "text": "As scale grows, moderators or community managers handle what the creator used to. The voice changes. The members feel it even if they don't name it."
+    },
+    {
+      "id": 6,
+      "kind": "observation",
+      "col": 22,
+      "row": 9,
+      "title": "members start performing",
+      "text": "Once the community feels watched, members write for the room rather than for themselves. Comments become content. The conversations get smarter and emptier at the same time."
+    },
+    {
+      "id": 7,
+      "kind": "observation",
+      "col": 22,
+      "row": 13,
+      "title": "the loud middle dominates",
+      "text": "The most active 5% of members produce 80% of the visible content. Newcomers see this and either match the existing tone or stay silent. The community starts to sound like itself."
+    },
+    {
+      "id": 8,
+      "kind": "observation",
+      "col": 8,
+      "row": 17,
+      "title": "founders start optimising",
+      "text": "When the community becomes the creator's livelihood, every post starts being measured. What used to be expression becomes content strategy. The creator can feel themselves doing it."
+    },
+    {
+      "id": 9,
+      "kind": "observation",
+      "col": 19,
+      "row": 17,
+      "title": "the quiet exit",
+      "text": "Long-time members don't usually leave loudly. They just check in less. Then less. Then they're gone, and no one notices because the community is busy being busy."
+    },
+    {
+      "id": 10,
+      "kind": "evidence",
+      "col": 3,
+      "row": 6,
+      "title": "Dunbar's number (~150)",
+      "text": "Robin Dunbar's research on cognitive limits to stable social relationships suggests 150 as the upper bound of meaningful community before structural mediation becomes necessary."
+    },
+    {
+      "id": 11,
+      "kind": "evidence",
+      "col": 27,
+      "row": 6,
+      "title": "Substack churn data",
+      "text": "Reported metrics from large Substack newsletters show subscriber engagement (open rates, replies, comments) drops monotonically with subscriber count after ~2,000 paying members."
+    },
+    {
+      "id": 12,
+      "kind": "evidence",
+      "col": 27,
+      "row": 18,
+      "title": "Patreon study on creator burnout",
+      "text": "A 2023 Patreon survey found 73% of mid-tier creators report 'feeling watched by their audience' as a top stressor \u2014 significantly higher than financial precarity."
+    },
+    {
+      "id": 13,
+      "kind": "question",
+      "col": 14,
+      "row": 21,
+      "title": "is calcification inevitable?",
+      "text": "Are there any creator-led communities that grew past Dunbar's number AND retained the early intimacy? Or is calcification simply what scale does to intimacy?"
+    },
+    {
+      "id": 14,
+      "kind": "observation",
+      "col": 14,
+      "row": 17,
+      "title": "the watching changes both sides",
+      "text": "Once the creator is being watched, they perform. Once members feel watched, they perform. The intimacy didn't die because either side wanted it to \u2014 both sides got self-conscious at the same time."
+    }
+  ],
+  "edges": [
+    {
+      "from": 4,
+      "to": 5,
+      "kind": "causation",
+      "warm": false
+    },
+    {
+      "from": 10,
+      "to": 4,
+      "kind": "causation",
+      "warm": false
+    },
+    {
+      "from": 11,
+      "to": 4,
+      "kind": "correlation",
+      "warm": false
+    },
+    {
+      "from": 12,
+      "to": 8,
+      "kind": "causation",
+      "warm": false
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "kind": "causation",
+      "warm": false
+    },
+    {
+      "from": 8,
+      "to": 6,
+      "kind": "causation",
+      "warm": false
+    },
+    {
+      "from": 14,
+      "to": 8,
+      "kind": "causation",
+      "warm": false
+    },
+    {
+      "from": 14,
+      "to": 6,
+      "kind": "causation",
+      "warm": false
+    },
+    {
+      "from": 1,
+      "to": 4,
+      "kind": "causation",
+      "warm": false
+    },
+    {
+      "from": 1,
+      "to": 6,
+      "kind": "causation",
+      "warm": false
+    }
+  ],
+  "edge_markers": [
+    {
+      "id": 1,
+      "kind": "tension",
+      "title": "intimacy vs scale",
+      "text": "The very thing that made the community valuable in the first months \u2014 direct contact with the creator, every member witnessed \u2014 becomes structurally impossible past a certain size. You cannot have both, and the community usually pretends it can.",
+      "contributors": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "col": 9,
+      "row": 11
+    },
+    {
+      "id": 2,
+      "kind": "insight",
+      "title": "calcification is mutual self-consciousness",
+      "text": "The community doesn't calcify because anyone wanted it to. It calcifies because once both creator and members start being watched (creator by metrics, members by each other), both start performing. Intimacy dies of self-consciousness, not of malice.",
+      "contributors": [
+        6,
+        7,
+        8,
+        14
+      ],
+      "col": 18,
+      "row": 15
+    }
+  ],
+  "painted": {
+    "4,8": "#c2d6e3",
+    "4,9": "#c2d6e3",
+    "4,10": "#c2d6e3",
+    "4,11": "#c2d6e3",
+    "4,12": "#c2d6e3",
+    "4,13": "#c2d6e3",
+    "4,14": "#c2d6e3",
+    "5,8": "#c2d6e3",
+    "5,9": "#c2d6e3",
+    "5,10": "#c2d6e3",
+    "5,11": "#c2d6e3",
+    "5,12": "#c2d6e3",
+    "5,13": "#c2d6e3",
+    "5,14": "#c2d6e3",
+    "6,8": "#c2d6e3",
+    "6,9": "#c2d6e3",
+    "6,10": "#c2d6e3",
+    "6,11": "#c2d6e3",
+    "6,12": "#c2d6e3",
+    "6,13": "#c2d6e3",
+    "6,14": "#c2d6e3",
+    "7,17": "#c2d6e3",
+    "8,17": "#c2d6e3",
+    "9,17": "#c2d6e3",
+    "21,8": "#e3c8c2",
+    "21,9": "#e3c8c2",
+    "21,10": "#e3c8c2",
+    "21,11": "#e3c8c2",
+    "21,12": "#e3c8c2",
+    "21,13": "#e3c8c2",
+    "21,14": "#e3c8c2",
+    "22,8": "#e3c8c2",
+    "22,9": "#e3c8c2",
+    "22,10": "#e3c8c2",
+    "22,11": "#e3c8c2",
+    "22,12": "#e3c8c2",
+    "22,13": "#e3c8c2",
+    "22,14": "#e3c8c2",
+    "23,8": "#e3c8c2",
+    "23,9": "#e3c8c2",
+    "23,10": "#e3c8c2",
+    "23,11": "#e3c8c2",
+    "23,12": "#e3c8c2",
+    "23,13": "#e3c8c2",
+    "23,14": "#e3c8c2",
+    "18,17": "#e3c8c2",
+    "19,17": "#e3c8c2",
+    "20,17": "#e3c8c2",
+    "12,8": "#c2dcd1",
+    "12,9": "#c2dcd1",
+    "12,10": "#c2dcd1",
+    "12,11": "#c2dcd1",
+    "12,12": "#c2dcd1",
+    "12,13": "#c2dcd1",
+    "12,14": "#c2dcd1",
+    "13,8": "#c2dcd1",
+    "13,9": "#c2dcd1",
+    "13,10": "#c2dcd1",
+    "13,11": "#c2dcd1",
+    "13,12": "#c2dcd1",
+    "13,13": "#c2dcd1",
+    "13,14": "#c2dcd1",
+    "14,8": "#c2dcd1",
+    "14,9": "#c2dcd1",
+    "14,10": "#c2dcd1",
+    "14,11": "#c2dcd1",
+    "14,12": "#c2dcd1",
+    "14,13": "#c2dcd1",
+    "14,14": "#c2dcd1",
+    "15,8": "#c2dcd1",
+    "15,9": "#c2dcd1",
+    "15,10": "#c2dcd1",
+    "15,11": "#c2dcd1",
+    "15,12": "#c2dcd1",
+    "15,13": "#c2dcd1",
+    "15,14": "#c2dcd1",
+    "13,17": "#c2dcd1",
+    "14,17": "#c2dcd1",
+    "15,17": "#c2dcd1"
+  },
+  "regions": [
+    {
+      "id": 1,
+      "name": "FOUNDER",
+      "anchorCol": 5,
+      "anchorRow": 11,
+      "colour": "#c2d6e3"
+    },
+    {
+      "id": 2,
+      "name": "MEMBERS",
+      "anchorCol": 22,
+      "anchorRow": 11,
+      "colour": "#e3c8c2"
+    },
+    {
+      "id": 3,
+      "name": "MUTUAL",
+      "anchorCol": 14,
+      "anchorRow": 11,
+      "colour": "#c2dcd1"
+    }
+  ],
+  "dismissed_suggestions": [],
+  "next_node_id": 15,
+  "next_edge_marker_id": 3,
+  "next_region_id": 4
+}

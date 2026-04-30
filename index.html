@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cartographer — a research tool from Pindrop Silence</title>
+<meta name="description" content="A research tool that maps your thoughts as a hand-drawn city. Place what you've noticed. Ask the cartographer to find the patterns between." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #ffffff;
+    --grid-fine: rgba(28, 54, 81, 0.07);
+    --grid-major: rgba(28, 54, 81, 0.16);
+    --ink: #1c3651;
+    --ink-soft: #34537a;
+    --ink-faint: rgba(28, 54, 81, 0.5);
+    --route: #c54838;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --display: "Archivo", "Helvetica Neue", sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  body {
+    background-image:
+      linear-gradient(to right, var(--grid-major) 0px, var(--grid-major) 1px, transparent 1px, transparent 160px),
+      linear-gradient(to bottom, var(--grid-major) 0px, var(--grid-major) 1px, transparent 1px, transparent 160px),
+      linear-gradient(to right, var(--grid-fine) 0px, var(--grid-fine) 1px, transparent 1px, transparent 32px),
+      linear-gradient(to bottom, var(--grid-fine) 0px, var(--grid-fine) 1px, transparent 1px, transparent 32px);
+    background-size: 160px 160px, 160px 160px, 32px 32px, 32px 32px;
+  }
+
+  .frame {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 88px 32px 64px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* === HEADER === */
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 80px;
+  }
+  .eye-mark {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+  .masthead-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+  }
+  .masthead-text strong {
+    color: var(--ink-soft);
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0;
+    font-family: var(--display);
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    margin-right: 8px;
+  }
+
+  /* === HERO === */
+  .hero { margin-bottom: 80px; }
+  .eyebrow {
+    font-family: var(--display);
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+  .eyebrow::before { content: '— '; color: var(--route); }
+  .title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+  .title em {
+    color: var(--route);
+    font-style: italic;
+  }
+  .subtitle {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin-bottom: 44px;
+  }
+
+  /* === BUTTONS === */
+  .buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    font-family: var(--display);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 16px 24px;
+    cursor: pointer;
+    border: 1px solid var(--ink);
+    background: var(--paper);
+    color: var(--ink);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn.primary {
+    background: var(--route);
+    border-color: var(--route);
+    color: var(--paper);
+  }
+  .btn.primary:hover {
+    background: #9c3527;
+    border-color: #9c3527;
+  }
+  .btn .btn-sub {
+    display: block;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 11px;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 400;
+    margin-top: 4px;
+    opacity: 0.75;
+  }
+
+  /* === DESCRIPTION === */
+  .description {
+    margin-bottom: 80px;
+    border-top: 1px solid rgba(28, 54, 81, 0.12);
+    padding-top: 44px;
+  }
+  .description p {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    margin-bottom: 16px;
+    max-width: 580px;
+  }
+  .description p em {
+    font-style: italic;
+    color: var(--route);
+  }
+  .description p:last-child {
+    color: var(--ink-soft);
+    font-style: italic;
+    font-size: 15.5px;
+  }
+
+  /* === FOOTER === */
+  .foot {
+    margin-top: auto;
+    padding-top: 64px;
+    border-top: 1px solid rgba(28, 54, 81, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .foot-attr {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+  .foot-attr strong {
+    font-family: var(--display);
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+  .foot-meta {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .frame { padding: 56px 24px 48px; }
+    .masthead { margin-bottom: 56px; }
+    .hero { margin-bottom: 56px; }
+    .title { font-size: 44px; }
+    .subtitle { font-size: 18px; }
+    .description p { font-size: 16px; }
+    .buttons { flex-direction: column; align-items: stretch; }
+    .btn { text-align: center; }
+  }
+
+  ::selection { background: var(--route); color: var(--paper); }
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+  <div class="masthead">
+    <!-- Pindrop Silence eye motif: a quiet open eye, hand-drawn quality -->
+    <svg class="eye-mark" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+      <!-- the open eye-shape, hand-drawn imperfection -->
+      <path d="M 4 18 Q 8 9 18 9 Q 28 9 32 18 Q 28 27 18 27 Q 8 27 4 18 Z"
+            fill="none" stroke="#1c3651" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- the pupil -->
+      <circle cx="18" cy="18" r="4" fill="#1c3651"/>
+      <!-- a tiny highlight -->
+      <circle cx="16.5" cy="16.5" r="1" fill="#ffffff"/>
+    </svg>
+    <span class="masthead-text">
+      <strong>Pindrop Silence</strong>
+      <span style="font-style: italic;">a small studio of standalone worlds</span>
+    </span>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">research instrument · v1</div>
+    <h1 class="title">Cartographer</h1>
+    <p class="subtitle">A research tool that maps your thoughts as a hand-drawn city. Place what you&rsquo;ve noticed. Ask the cartographer to find the patterns between.</p>
+    <div class="buttons">
+      <a class="btn primary" href="./tool/?example=communities">
+        Open an example
+        <span class="btn-sub">creator-led communities</span>
+      </a>
+      <a class="btn" href="./tool/?fresh=1">
+        Start fresh
+        <span class="btn-sub">your own inquiry</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="description">
+    <p>You arrive with something you&rsquo;re trying to understand. A question, a hunch, a few observations that haven&rsquo;t yet added up. You place them on a graph paper grid &mdash; <em>questions</em> for what you don&rsquo;t know, <em>observations</em> for what you&rsquo;ve noticed, <em>evidence</em> for what you&rsquo;ve brought in from outside.</p>
+    <p>You connect them. You paint regions. You let the territory take a shape that means something to you. Then, when you&rsquo;re ready, you ask the cartographer to look at what you&rsquo;ve made &mdash; and it tells you what it sees.</p>
+    <p>Tensions you hadn&rsquo;t named. Insights forming across nodes you didn&rsquo;t connect. Frameworks your inquiry rhymes with. Honest uncertainty about what&rsquo;s missing. The cartographer doesn&rsquo;t answer your question. It helps you see your inquiry more clearly than you did before you asked.</p>
+  </div>
+
+  <div class="foot">
+    <div class="foot-attr">
+      A project of <strong>Pindrop Silence</strong>
+    </div>
+    <div class="foot-meta">
+      v1 &middot; April 2026
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
